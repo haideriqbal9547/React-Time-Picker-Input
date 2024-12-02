@@ -58,7 +58,7 @@
     "preGitAdd": "npm run patch",
     "GitAdd": "git add .",
     "preGitCommit": "npm run GitAdd",
-    "GitCommit": "git commit -m m || true",
+    "GitCommit": "git commit -m m || exit 0",
     "preGitDeploy": "npm run GitCommit",
     "GitDeploy": "git push -u origin main || true",
     "preBuild": "npm run GitDeploy",
