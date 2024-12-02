@@ -62,7 +62,7 @@
     "preGitDeploy": "npm run GitCommit",
     "GitDeploy": "git push -u origin main || true",
     "preBuild": "npm run GitDeploy",
-    "Build": "rimraf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
+    "Build": "rimraf dist && cross-env NODE_ENV=production babel src/lib --out-dir dist --copy-files",
     "predeploy": "npm run Build",
     "deploy": "npm publish",
     "eject": "react-scripts eject"
@@ -80,6 +80,7 @@
     "@babel/cli": "^7.13.14",
     "@babel/core": "^7.22.8",
     "@babel/preset-env": "^7.16.1",
+    "cross-env": "^7.0.3",
     "react-scripts": "4.0.3",
     "rimraf": "^6.0.1"
   },
