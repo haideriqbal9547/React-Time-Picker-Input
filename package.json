@@ -50,7 +50,7 @@
     "sass": "node-sass src/lib/components/styles/main.scss src/App.css -w",
     "beforePatchGitAdd": "git add .",
     "preBeforePatchGitCommit": "npm run beforePatchGitAdd",
-    "BeforePatchGitCommit": "git commit -m m || true",
+    "BeforePatchGitCommit": "git commit -m m || exit 0",
     "preBeforePatchGitPush": "npm run BeforePatchGitCommit",
     "BeforePatchGitPush": "git push -u origin main || true",
     "prepatch": "npm run BeforePatchGitPush",
